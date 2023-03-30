@@ -49,6 +49,10 @@ Dit wil ik bereiken met een magnetic field sensor, Adruino NANO en een speaker/L
 ## Het process:
 
 
+https://user-images.githubusercontent.com/70582804/228811880-5223f74e-5b87-417c-b7f5-924c0130c237.mp4
+
+
+
 
 ## Bronnen:
 [specaile input en output](https://exploringmaintopicsofcomp214.weebly.com/index.html)
