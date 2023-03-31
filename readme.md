@@ -54,6 +54,7 @@ https://user-images.githubusercontent.com/70582804/228811880-5223f74e-5b87-417c-
 
 ## My stuff:
 [Trello](https://trello.com/b/FqTdeQZD/geigercounterhorrorexp)
+
 [My Website](https://michellefrankfort.wordpress.com/)
 ## Bronnen:
 [specaile input en output](https://exploringmaintopicsofcomp214.weebly.com/index.html)
