@@ -52,6 +52,17 @@ Dit wil ik bereiken met een magnetic field sensor, Adruino NANO en een speaker/L
 https://user-images.githubusercontent.com/70582804/228811880-5223f74e-5b87-417c-b7f5-924c0130c237.mp4
 
 
+## User Test
+
+Video here
+
+## user feedback:
+De user feedback was dat:
+
+Er meer visaule feedback mag zijn. want als je niet bekend bent met een sensor is het lastig te vinden.
+De tekst verscheen te snel. De tekst mag wel wat langer over doen voor er weer nieuwe tekst verschijnt.
+En het is handig dat er een uitleg is over wat een geiger counter is. Want als je er niks over weet is de ervaring anders.
+
 ## My stuff:
 [Trello](https://trello.com/b/FqTdeQZD/geigercounterhorrorexp)
 

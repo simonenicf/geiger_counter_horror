@@ -9,7 +9,6 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
-using UnityEditor.Networking.PlayerConnection;
 
 /**
  * Sample for reading using polling by yourself, and writing too.

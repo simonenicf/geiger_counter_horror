@@ -8,6 +8,11 @@ public class Adruino_connected : MonoBehaviour
     public SerialController serialController;
     public TMP_Text arduinoTXT;
     private bool goes_off = false;
+    private bool hi;
+    public Main_Part mainPart;
+    private string myMessage;
+    private bool chaos = false;
+    private IEnumerator our_coruitine;
 
     public bool Goes_off
     {
@@ -25,24 +30,25 @@ public class Adruino_connected : MonoBehaviour
     // Executed each frame
     void Update()
     {
+        if (!chaos)
+        {
+            myMessage = mainPart.A;
+        }
         //---------------------------------------------------------------------
         // Send data
         //---------------------------------------------------------------------
 
         // If you press one of these keys send it to the serial device. A
         // sample serial device that accepts this input is given in the README.
-        if (Input.GetKeyDown(KeyCode.A))
+        if (myMessage == "A")
         {
+            chaos = !chaos;
+            myMessage = "B";
+            our_coruitine = Change(0.5f);
+            StartCoroutine(Change(0.5f));
             Debug.Log("Sending A");
             serialController.SendSerialMessage("A");
         }
-
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            Debug.Log("Sending Z");
-            serialController.SendSerialMessage("Z");
-        }
-
 
         //---------------------------------------------------------------------
         // Receive data
@@ -70,6 +76,38 @@ public class Adruino_connected : MonoBehaviour
         if (message == "Go")
         {
             goes_off = true;
+        }
+        else
+        {
+            goes_off = false;
+        }
+
+        
+    }
+
+    private IEnumerator Change(float waitTime)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(waitTime);
+            serialController.SendSerialMessage("A");
+            yield return new WaitForSeconds(waitTime + 0.5f );
+            serialController.SendSerialMessage("A");
+            yield return new WaitForSeconds(waitTime + 1f);
+            serialController.SendSerialMessage("A");
+            yield return new WaitForSeconds(waitTime + 1.5f);
+            serialController.SendSerialMessage("A");
+            yield return new WaitForSeconds(waitTime + 2f);
+            serialController.SendSerialMessage("A");
+            yield return new WaitForSeconds(waitTime + 2.5f);
+            serialController.SendSerialMessage("A");
+            yield return new WaitForSeconds(waitTime + 3f);
+            serialController.SendSerialMessage("A");
+            yield return new WaitForSeconds(waitTime + 3.5f);
+            serialController.SendSerialMessage("A");
+            yield return new WaitForSeconds(waitTime + 3.5f);
+            serialController.SendSerialMessage("A");
+            yield break;
         }
     }
 }
