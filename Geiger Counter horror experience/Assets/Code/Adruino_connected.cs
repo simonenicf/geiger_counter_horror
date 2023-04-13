@@ -7,6 +7,12 @@ public class Adruino_connected : MonoBehaviour
 {
     public SerialController serialController;
     public TMP_Text arduinoTXT;
+    private bool goes_off = false;
+
+    public bool Goes_off
+    {
+        get { return goes_off; }
+    }
 
     // Initialization
     void Start()
@@ -60,6 +66,11 @@ public class Adruino_connected : MonoBehaviour
         }
         else
             Debug.Log("Message arrived: " + message);
+
+        if (message == "Go")
+        {
+            goes_off = true;
+        }
     }
 }
 
