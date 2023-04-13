@@ -1,32 +1,12 @@
-/**
- * Ardity (Serial Communication for Arduino + Unity)
- * Author: Daniel Wilches <dwilches@gmail.com>
- *
- * This work is released under the Creative Commons Attributions license.
- * https://creativecommons.org/licenses/by/2.0/
- */
-
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Networking.PlayerConnection;
+using UnityEngine;
 
-/**
- * Sample for reading using polling by yourself, and writing too.
- */
-
-public class SampleUserPolling_ReadWrite : MonoBehaviour
+public class Adruino_connected : MonoBehaviour
 {
     public SerialController serialController;
-    public TMP_Text arduinoMyText;
-    private bool connected = false;
-
-    public bool Connected
-    {
-        get {
-            return connected;
-        }
-    }
+    public TMP_Text arduinoTXT;
 
     // Initialization
     void Start()
@@ -71,16 +51,15 @@ public class SampleUserPolling_ReadWrite : MonoBehaviour
         if (ReferenceEquals(message, SerialController.SERIAL_DEVICE_CONNECTED))
         {
             Debug.Log("Connection established");
-            arduinoMyText.text = "Arduino: Connected";
-            connected = true;
+            arduinoTXT.text = "Arduino: Connected";
         }
         else if (ReferenceEquals(message, SerialController.SERIAL_DEVICE_DISCONNECTED))
         {
             Debug.Log("Connection attempt failed or disconnection detected");
-            arduinoMyText.text = "Arduino: Not connected";
-            connected = false;
+            arduinoTXT.text = "Arduino: Not connected";
         }
         else
             Debug.Log("Message arrived: " + message);
     }
 }
+
