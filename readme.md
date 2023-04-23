@@ -72,6 +72,8 @@ En het is handig dat er een uitleg is over wat een geiger counter is. Want als j
 
 
 [My Website](https://michellefrankfort.wordpress.com/)
-
+## tools used:
+[Ardity] (https://ardity.dwilches.com/)
+[Arduino IDE] (https://www.arduino.cc/en/software)
 ## Bronnen:
 [specaile input en output](https://exploringmaintopicsofcomp214.weebly.com/index.html)
