@@ -25,7 +25,7 @@ public class Menu_Code : MonoBehaviour
 
     void Load_Game()
     {
-        SceneManager.LoadScene (sceneBuildIndex:1);
+        SceneManager.LoadScene (sceneBuildIndex:4);
     }
 
     void Explain_Game()
